@@ -8,6 +8,7 @@
 
 import UIKit
 import BookStoreKit
+import WOVNswift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if ProcessInfo.processInfo.arguments.contains("-uitesting") {
             BookStoreConfiguration.shared.setBaseURL(URL(string: "http://localhost:8080")!)
         }
-        
+        print("WOVN SDK VERSION: \(Wovn.sdkVersion)")
         return true
     }
 }

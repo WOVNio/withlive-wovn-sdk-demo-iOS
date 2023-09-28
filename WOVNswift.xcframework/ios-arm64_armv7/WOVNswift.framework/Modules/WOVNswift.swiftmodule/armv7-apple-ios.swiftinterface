@@ -1,0 +1,272 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target armv7-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name WOVNswift
+import CommonCrypto
+import Foundation
+import Swift
+import SystemConfiguration
+import UIKit
+@_exported import WOVNswift
+import _Concurrency
+import os
+public enum ActivateOfflineProgressStatus : Swift.Int {
+  case gettingScreenListDone, failedToGetScreenList, downloadedScreenData, failedToDownloadScreenData, canceled
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class WovnActivateOfflineProgressParameters {
+  public var progress: Swift.Float
+  public var status: WOVNswift.ActivateOfflineProgressStatus
+  public var screen: Swift.String?
+  public var screenDone: Swift.Int
+  public var screenCount: Swift.Int
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class Lang : ObjectiveC.NSObject {
+  @objc public static let arabic: WOVNswift.Lang
+  @objc public static let basque: WOVNswift.Lang
+  @objc public static let bengali: WOVNswift.Lang
+  @objc public static let bulgarian: WOVNswift.Lang
+  @objc public static let catalan: WOVNswift.Lang
+  @objc public static let simplifiedChinese: WOVNswift.Lang
+  @objc public static let traditionalChinese: WOVNswift.Lang
+  @objc public static let danish: WOVNswift.Lang
+  @objc public static let dutch: WOVNswift.Lang
+  @objc public static let english: WOVNswift.Lang
+  @objc public static let finnish: WOVNswift.Lang
+  @objc public static let french: WOVNswift.Lang
+  @objc public static let galician: WOVNswift.Lang
+  @objc public static let german: WOVNswift.Lang
+  @objc public static let greek: WOVNswift.Lang
+  @objc public static let hebrew: WOVNswift.Lang
+  @objc public static let hungarian: WOVNswift.Lang
+  @objc public static let indonesian: WOVNswift.Lang
+  @objc public static let italian: WOVNswift.Lang
+  @objc public static let japanese: WOVNswift.Lang
+  @objc public static let korean: WOVNswift.Lang
+  @objc public static let latvian: WOVNswift.Lang
+  @objc public static let malay: WOVNswift.Lang
+  @objc public static let burmese: WOVNswift.Lang
+  @objc public static let nepali: WOVNswift.Lang
+  @objc public static let norwegian: WOVNswift.Lang
+  @objc public static let persian: WOVNswift.Lang
+  @objc public static let polish: WOVNswift.Lang
+  @objc public static let portuguese: WOVNswift.Lang
+  @objc public static let russian: WOVNswift.Lang
+  @objc public static let spanish: WOVNswift.Lang
+  @objc public static let swahili: WOVNswift.Lang
+  @objc public static let swedish: WOVNswift.Lang
+  @objc public static let tagalog: WOVNswift.Lang
+  @objc public static let thai: WOVNswift.Lang
+  @objc public static let hindi: WOVNswift.Lang
+  @objc public static let turkish: WOVNswift.Lang
+  @objc public static let ukrainian: WOVNswift.Lang
+  @objc public static let urdu: WOVNswift.Lang
+  @objc public static let vietnamese: WOVNswift.Lang
+  @objc public static let undefined: WOVNswift.Lang
+  @objc final public let code: Swift.String
+  @objc deinit
+}
+@available(iOS 13.0, *)
+extension WOVNswift.WovnExtension where Base : UIKit.UIBarButtonItemStateAppearance {
+  final public var ignore: Swift.Bool? {
+    get
+    set(newVal)
+  }
+}
+extension WOVNswift.WovnExtension where Base : UIKit.UIBarItem {
+  final public var ignore: Swift.Bool? {
+    get
+    set(newVal)
+  }
+}
+@available(iOS 13.0, *)
+extension WOVNswift.WovnExtension where Base : UIKit.UIBarAppearance {
+  final public var ignore: Swift.Bool? {
+    get
+    set(newVal)
+  }
+}
+public enum WovnPermission {
+  case all, report, dynamic, error
+  public static func == (a: WOVNswift.WovnPermission, b: WOVNswift.WovnPermission) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol WovnExtendablePublic {
+}
+extension WOVNswift.WovnExtendablePublic {
+  public var wovn: WOVNswift.WovnExtension<Self> {
+    get
+  }
+}
+extension UIKit.UIAlertController {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var wovnTranslatedTitle: Swift.String? {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var wovnTranslatedMessage: Swift.String? {
+    @objc get
+  }
+}
+extension UIKit.UIAlertAction {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var wovnTranslatedTitle: Swift.String? {
+    @objc get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class ViewLogger : ObjectiveC.NSObject {
+  @objc public static func resetLogger()
+  @objc public static func printTotalTime()
+  @objc public static func setIsFullLoggingMode(enabled: Swift.Bool)
+  @objc public static func getTranslateViewTotalTime() -> Swift.Int
+  @objc public static func getRegisterViewTotalTime() -> Swift.Int
+  @objc public static func getIsIgnoredTotalTime() -> Swift.Int
+  @objc public static func getClearIsIgnoredSavedTotalTime() -> Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class Wovn : ObjectiveC.NSObject {
+  @objc public static let sdkVersion: Swift.String
+  @objc public static func getCurrentLangCode() -> Swift.String?
+  public static func translateView(view: UIKit.UIView, screenName: Swift.String? = nil, translationType: WOVNswift.TranslationType = .translateView, completionHandler: @escaping () -> Swift.Void = {})
+  public static func translateView(view: UIKit.UIView, viewController: UIKit.UIViewController, translationType: WOVNswift.TranslationType = .translateView, completionHandler: @escaping () -> Swift.Void = {})
+  public static func translate(navigationItem: UIKit.UINavigationItem, screenName: Swift.String? = nil, translationType: WOVNswift.TranslationType = .translateView, completionHandler: @escaping () -> Swift.Void = {})
+  public static func translate(navigationItem: UIKit.UINavigationItem, viewController: UIKit.UIViewController, translationType: WOVNswift.TranslationType = .translateView, completionHandler: @escaping () -> Swift.Void = {})
+  @objc public static func changeToSystemLang(callback: ((Swift.String) -> Swift.Void)? = nil)
+  @objc public static func changeLang(langs: Swift.String, callback: ((Swift.String) -> Swift.Void)? = nil)
+  public static func setImageUrl(_ view: Swift.AnyObject, url: Swift.String, property: WOVNswift.ImageProperty? = nil, scale: CoreGraphics.CGFloat = 1.0)
+  public static func setImageUrl(button: UIKit.UIButton, url: Swift.String, for state: UIKit.UIControl.State, property: WOVNswift.ImageProperty? = nil, scale: CoreGraphics.CGFloat = 1.0)
+  @objc public static func setImageUrl(segmentedControl: UIKit.UISegmentedControl, url: Swift.String, at segment: Swift.Int, scale: CoreGraphics.CGFloat = 1.0)
+  @objc public static func setSvgImageLoader(_ svgImageLoader: WOVNswift.WovnSvgImageLoader)
+  public static func setImageUrl(tabBarItem: UIKit.UITabBarItem, url: Swift.String, property: WOVNswift.ImageProperty? = nil, scale: CoreGraphics.CGFloat = 1.0)
+  @objc public static func async(screenName: Swift.String? = nil, callback: @escaping (WOVNswift.WovnClient) -> Swift.Void)
+  @objc public static func translate(string: Swift.String) -> Swift.String?
+  public static func translateInMainThread(src: Swift.String, screenName: Swift.String, timeoutMilliSec: Swift.Int? = nil) -> Swift.String
+  @objc public static func addCallback(_ fun: @escaping (WOVNswift.WovnCallbackParameters) -> Swift.Void)
+  public static func activateOfflineTranslation(callback: @escaping (WOVNswift.WovnActivateOfflineProgressParameters) -> Swift.Void = { _ in })
+  @objc public static func cancelOfflineTranslation()
+  public static func getWovnStatus() -> WOVNswift.WovnStatus
+  @objc public static func eventTypeReport()
+  public static func setPermission(permission: WOVNswift.WovnPermission, enabled: Swift.Bool)
+  @objc public static func setAsParentScreen(screenName: Swift.String)
+  @objc public static func renameScreen(screenName: Swift.String, newScreenName: Swift.String)
+  @objc public static func sendDummyErrorReport(key: Swift.String, message: Swift.String)
+  @objc public static func isLimitedConnectionTriggered() -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class WovnCallbackParameters : ObjectiveC.NSObject {
+  @objc final public let target: Any
+  @objc final public let state: Swift.UInt
+  @objc final public let src: Swift.String
+  @objc final public let dst: Swift.String
+  @objc final public let langCode: Swift.String
+  @objc deinit
+}
+@objc public protocol WovnSvgImageLoader {
+  @objc func createImage(_: Foundation.Data, callback: @escaping (UIKit.UIImage) -> Swift.Void)
+}
+public enum ImageProperty {
+  case image, backgroundImage, highlightedImage, selectedImage
+  public static func == (a: WOVNswift.ImageProperty, b: WOVNswift.ImageProperty) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum FeatureStatus : Swift.Int {
+  case enabled, disabled, notInitialized
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum LoadStatus {
+  case loading, loaded, networkError, cached, error
+  public func isReady() -> Swift.Bool
+  public static func == (a: WOVNswift.LoadStatus, b: WOVNswift.LoadStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class WovnStatus : Swift.CustomStringConvertible {
+  public var wovnApp: WOVNswift.FeatureStatus
+  public var offlineMode: WOVNswift.FeatureStatus
+  public var cacheExpired: Foundation.Date?
+  public var offlineDataDownloadStartedAt: Foundation.Date?
+  public var offlineCacheSavedAt: Foundation.Date?
+  public var sourceLanguage: Swift.String
+  public var languages: Swift.Set<Swift.String>
+  public var loadStatus: WOVNswift.LoadStatus
+  public var appOperatorMode: Swift.Bool
+  public var willReport: Swift.Bool
+  public var reportInterval: Swift.Int
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class WovnClient : ObjectiveC.NSObject {
+  @objc public func translate(src: Swift.String) -> Swift.String?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class Logger : ObjectiveC.NSObject {
+  @objc public static func error(message: Swift.String)
+  @objc public static func info(message: Swift.String)
+  @objc public static func warn(message: Swift.String)
+  @objc public static func debug(message: Swift.String)
+  @objc public static func verbose(message: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum TranslationType {
+  case translateView, eventReporting, pollReporting, languageChange, other
+  public static func == (a: WOVNswift.TranslationType, b: WOVNswift.TranslationType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension WOVNswift.WovnExtension where Base : UIKit.UINavigationItem {
+  final public var ignore: Swift.Bool? {
+    get
+    set(newVal)
+  }
+}
+extension WOVNswift.WovnExtension where Base : UIKit.UIView {
+  final public var ignore: Swift.Bool? {
+    get
+    set(newVal)
+  }
+}
+@objcMembers final public class WovnExtension<Base> : ObjectiveC.NSObject {
+  public init(_ base: Base)
+  @objc deinit
+}
+extension WOVNswift.ActivateOfflineProgressStatus : Swift.Equatable {}
+extension WOVNswift.ActivateOfflineProgressStatus : Swift.Hashable {}
+extension WOVNswift.ActivateOfflineProgressStatus : Swift.RawRepresentable {}
+@available(iOS 13.0, *)
+extension UIKit.UIBarButtonItemStateAppearance : WOVNswift.WovnExtendablePublic {}
+extension UIKit.UIBarItem : WOVNswift.WovnExtendablePublic {}
+@available(iOS 13.0, *)
+extension UIKit.UIBarAppearance : WOVNswift.WovnExtendablePublic {}
+extension WOVNswift.WovnPermission : Swift.Equatable {}
+extension WOVNswift.WovnPermission : Swift.Hashable {}
+extension WOVNswift.ImageProperty : Swift.Equatable {}
+extension WOVNswift.ImageProperty : Swift.Hashable {}
+extension WOVNswift.FeatureStatus : Swift.Equatable {}
+extension WOVNswift.FeatureStatus : Swift.Hashable {}
+extension WOVNswift.FeatureStatus : Swift.RawRepresentable {}
+extension WOVNswift.LoadStatus : Swift.Equatable {}
+extension WOVNswift.LoadStatus : Swift.Hashable {}
+extension WOVNswift.TranslationType : Swift.Equatable {}
+extension WOVNswift.TranslationType : Swift.Hashable {}
+extension UIKit.UINavigationItem : WOVNswift.WovnExtendablePublic {}
+extension UIKit.UIView : WOVNswift.WovnExtendablePublic {}

@@ -1,0 +1,11 @@
+framework module WOVNswift {
+  umbrella header "WOVNswift.h"
+
+  export *
+  module * { export * }
+}
+
+module WOVNswift.Swift {
+    header "WOVNswift-Swift.h"
+    requires objc
+}

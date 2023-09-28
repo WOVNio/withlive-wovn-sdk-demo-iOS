@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4786ACEF2AC5528E00463620 /* WOVNswift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4786ACED2AC5528700463620 /* WOVNswift.xcframework */; };
+		4786ACF02AC5528E00463620 /* WOVNswift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4786ACED2AC5528700463620 /* WOVNswift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4786ACF22AC552C300463620 /* WOVNswift.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4786ACF12AC552C300463620 /* WOVNswift.plist */; };
 		F529C1A023084C7200529833 /* SearchErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529C19F23084C7200529833 /* SearchErrorTests.swift */; };
 		F531D83D22AE62B300156E2E /* NewBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F531D83C22AE62B300156E2E /* NewBooksViewController.swift */; };
 		F531D84522AE6A4100156E2E /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F531D84322AE6A4100156E2E /* BookCell.swift */; };
@@ -137,6 +140,7 @@
 			files = (
 				F55CD26C22B3E8D8005D8C6C /* Networking.framework in Embed Frameworks */,
 				F56ACD4F22BD24C300317A84 /* BookStoreKit.framework in Embed Frameworks */,
+				4786ACF02AC5528E00463620 /* WOVNswift.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +148,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4786ACED2AC5528700463620 /* WOVNswift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = WOVNswift.xcframework; sourceTree = "<group>"; };
+		4786ACF12AC552C300463620 /* WOVNswift.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WOVNswift.plist; sourceTree = "<group>"; };
 		F529C19F23084C7200529833 /* SearchErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchErrorTests.swift; sourceTree = "<group>"; };
 		F531D82F22AE510900156E2E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F531D83122AE519700156E2E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -264,6 +270,7 @@
 			files = (
 				F55CD26B22B3E8D8005D8C6C /* Networking.framework in Frameworks */,
 				F56ACD4E22BD24C300317A84 /* BookStoreKit.framework in Frameworks */,
+				4786ACEF2AC5528E00463620 /* WOVNswift.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +455,8 @@
 		F5C13D3122AE4D5E00F02A36 = {
 			isa = PBXGroup;
 			children = (
+				4786ACF12AC552C300463620 /* WOVNswift.plist */,
+				4786ACED2AC5528700463620 /* WOVNswift.xcframework */,
 				F5C13D3C22AE4D5E00F02A36 /* BookStore */,
 				F5DEF2D32310F27B00BFBFDA /* BookStoreTests */,
 				F5BBB9642311404D007C71EC /* BookStoreUITests */,
@@ -770,6 +779,7 @@
 				F531D84622AE6A4100156E2E /* BookCell.xib in Resources */,
 				F5C13D4822AE4D6000F02A36 /* LaunchScreen.storyboard in Resources */,
 				F5C13D4522AE4D6000F02A36 /* Assets.xcassets in Resources */,
+				4786ACF22AC552C300463620 /* WOVNswift.plist in Resources */,
 				F5C13D4322AE4D5E00F02A36 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

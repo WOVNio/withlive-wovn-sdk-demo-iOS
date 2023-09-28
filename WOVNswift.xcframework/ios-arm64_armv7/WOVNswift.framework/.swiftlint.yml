@@ -1,0 +1,35 @@
+line_length:
+    warning: 180
+    error: 200
+    ignores_comments: true
+opt_in_rules:
+    - empty_count
+    - force_unwrapping
+    - private_outlet
+excluded:
+    - Carthage
+    - WOVNswiftSVG
+disabled_rules:
+    - type_body_length
+    - function_parameter_count
+custom_rules:
+    public_class_must_inherit_nsobject: # rule identifier
+        included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+        excluded: ".*[Test|test]\\.swift" # regex that defines paths to exclude during linting. optional
+        name: "[WOVN] Public class must inherit NSObject to call from Objective-C." # rule name. optional.
+        regex: "(^\\s*public\\s*class(?!.*NSObject).*$)" # matching pattern
+        severity: error # violation severity. optional.
+        # match_kinds: # SyntaxKinds to match. optional.
+        # message: # violation message. optional.
+    public_class_need_to_set_objcMembers_interface:
+        included: ".*\\.swift"
+        excluded: ".*[Test|test]\\.swift"
+        name: "[WOVN] Public class need to set @objcMembers to call from Objective-C."
+        regex: "(^(?!.*\\@objcMembers).*\n\\s*public\\s*class.*$)"
+        severity: error
+    public_protocol_need_to_set_objc_interface:
+        included: ".*\\.swift"
+        excluded: ".*[Test|test]\\.swift"
+        name: "[WOVN] Public protocol need to set @objc to call from Objective-C."
+        regex: "(^(?!.*\\@objc)public(?=.+protocol).*$)"
+        severity: error
